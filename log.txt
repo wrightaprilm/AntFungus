@@ -1,0 +1,561 @@
+INFO     | 2017-08-23 18:32:29,904 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 18:32:29,907 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 18:32:29,908 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 18:32:29,908 | parser     | You set 'models' to: GTR, GTR+G, GTR+I+G
+INFO     | 2017-08-23 18:32:29,931 | model_load | This analysis will use the following 3 models of molecular evolution
+INFO     | 2017-08-23 18:32:29,932 | model_load | GTR, GTR+G, GTR+I+G
+INFO     | 2017-08-23 18:32:29,932 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 18:32:29,933 | config     | Setting 'search' to 'greedy'
+INFO     | 2017-08-23 18:32:29,934 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 18:32:29,934 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 18:32:29,941 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 18:32:29,941 | analysis   | Beginning Analysis
+INFO     | 2017-08-23 18:32:29,957 | alignment  | Reading alignment file './MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 18:32:29,965 | analysis   | Starting tree will be estimated from the data.
+INFO     | 2017-08-23 18:32:29,966 | raxml      | Estimating Maximum Likelihood tree with RAxML fast experimental tree search for ./analysis/start_tree/filtered_source.phy
+INFO     | 2017-08-23 18:32:29,966 | raxml      | Using a separate GTR+G model for each data block
+INFO     | 2017-08-23 18:32:36,286 | raxml      | Estimating GTR+G branch lengths on ML tree using all partitions
+INFO     | 2017-08-23 18:32:41,697 | raxml      | ML topology estimation finished
+INFO     | 2017-08-23 18:32:41,698 | analysis_m | Performing Greedy Analysis
+INFO     | 2017-08-23 18:32:41,699 | analysis_m |    *** Analysing starting scheme ***
+INFO     | 2017-08-23 18:33:22,802 | progress   |       Finished subset 1/3, 33.33 percent done
+INFO     | 2017-08-23 18:33:25,935 | progress   |       Finished subset 2/3, 66.67 percent done
+INFO     | 2017-08-23 18:33:30,586 | progress   |       Finished subset 3/3, 100.00 percent done
+INFO     | 2017-08-23 18:33:30,587 | analysis_m |    ***Greedy algorithm step 1***
+INFO     | 2017-08-23 18:33:30,587 | analysis_m |       Analysing 3 new subset pairs
+INFO     | 2017-08-23 18:34:43,774 | progress   |       Finished subset 1/3, 33.33 percent done
+INFO     | 2017-08-23 18:34:58,825 | progress   |       Finished subset 2/3, 66.67 percent done
+INFO     | 2017-08-23 18:35:04,688 | progress   |       Finished subset 3/3, 100.00 percent done
+INFO     | 2017-08-23 18:35:04,689 | analysis_m |       Finding the best partitioning scheme
+INFO     | 2017-08-23 18:35:04,690 | analysis_m |       Best scheme combines subsets: 'Gene1_pos1' and 'Gene1_pos2'
+INFO     | 2017-08-23 18:35:04,690 | analysis_m |       The best scheme improves the aicc score by 2.58 to 19526.2
+INFO     | 2017-08-23 18:35:04,691 | analysis_m |    ***Greedy algorithm step 2***
+INFO     | 2017-08-23 18:35:04,692 | analysis_m |       Analysing 1 new subset pairs
+INFO     | 2017-08-23 18:35:36,962 | progress   |       Finished subset 1/1, 100.00 percent done
+INFO     | 2017-08-23 18:35:36,963 | analysis_m |       Finding the best partitioning scheme
+INFO     | 2017-08-23 18:35:36,963 | analysis_m |       Found no schemes that improve the score, stopping
+INFO     | 2017-08-23 18:35:36,964 | analysis_m |    Greedy algorithm finished after 2 steps
+INFO     | 2017-08-23 18:35:36,964 | analysis_m |    Best scoring scheme is scheme step_1, with aicc score of 19526.191
+INFO     | 2017-08-23 18:35:36,964 | model_util |    Information on best scheme is here: ./analysis/best_scheme.txt
+INFO     | 2017-08-23 18:35:36,965 | model_util |    
+INFO     | 2017-08-23 18:35:36,965 | model_util |    
+INFO     | 2017-08-23 18:35:36,966 | model_util |    *Citations for this analysis*
+INFO     | 2017-08-23 18:35:36,966 | model_util |    -----------------------------
+INFO     | 2017-08-23 18:35:36,966 | model_util |    
+INFO     | 2017-08-23 18:35:36,966 | model_util |    If you use this analysis in your published work, please cite the following papers on which your analysis relied.
+INFO     | 2017-08-23 18:35:36,966 | model_util |    
+INFO     | 2017-08-23 18:35:36,966 | model_util |    For the version of PartitionFinder you used, please cite:
+INFO     | 2017-08-23 18:35:36,966 | model_util |    Lanfear, R., Frandsen, P. B., Wright, A. M., Senfeld, T., Calcott, B. (2016) PartitionFinder 2: new methods for selecting partitioned models of evolution formolecular and morphological phylogenetic analyses. Molecular biology and evolution. DOI: dx.doi.org/10.1093/molbev/msw260
+INFO     | 2017-08-23 18:35:36,966 | model_util |    
+INFO     | 2017-08-23 18:35:36,966 | model_util |    For the greedy algorithm you used, please cite:
+INFO     | 2017-08-23 18:35:36,967 | model_util |    Lanfear, R., Calcott, B., Ho, S. Y., & Guindon, S. (2012). PartitionFinder: combined selection of partitioning schemes and substitution models for phylogenetic analyses. Molecular biology and evolution, 29(6), 1695-1701.
+INFO     | 2017-08-23 18:35:36,967 | model_util |    
+INFO     | 2017-08-23 18:35:36,967 | model_util |    Your analysis also used PhyML, so please cite:
+INFO     | 2017-08-23 18:35:36,967 | model_util |    Guindon, S., Dufayard, J. F., Lefort, V., Anisimova, M., Hordijk, W., & Gascuel, O. (2010). New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0. Systematic biology, 59(3), 307-321.
+INFO     | 2017-08-23 18:35:36,967 | model_util |    
+INFO     | 2017-08-23 18:35:36,969 | main       | Total processing time: 0:03:07 (h:m:s)
+INFO     | 2017-08-23 18:35:36,969 | main       | Processing complete.
+INFO     | 2017-08-23 18:39:02,650 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 18:39:02,654 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 18:39:02,654 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 18:39:02,655 | parser     | You set 'models' to: GTR, GTR+G, GTR+I+G
+INFO     | 2017-08-23 18:39:02,662 | model_load | This analysis will use the following 3 models of molecular evolution
+INFO     | 2017-08-23 18:39:02,662 | model_load | GTR, GTR+G, GTR+I+G
+INFO     | 2017-08-23 18:39:02,662 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 18:39:02,665 | config     | Setting 'search' to 'user'
+INFO     | 2017-08-23 18:39:02,665 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 18:39:02,665 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 18:39:02,670 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 18:39:02,670 | analysis   | Beginning Analysis
+INFO     | 2017-08-23 18:39:02,679 | config     | Checking previously run configuration data...
+INFO     | 2017-08-23 18:39:02,680 | alignment  | Reading alignment file './MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 18:39:02,686 | alignment  | Reading alignment file './analysis/start_tree/source.phy'
+INFO     | 2017-08-23 18:39:02,695 | analysis   | Starting tree file found.
+INFO     | 2017-08-23 18:39:02,697 | analysis_m | Performing User analysis
+ERROR    | 2017-08-23 18:39:02,697 | analysis_m | Search set to 'user', but no user schemes detected in .cfg file. Please check.
+ERROR    | 2017-08-23 18:39:02,698 | main       | Failed to run. See previous errors.
+INFO     | 2017-08-23 18:40:28,813 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 18:40:28,817 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 18:40:28,817 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 18:40:28,817 | parser     | You set 'models' to: allx
+INFO     | 2017-08-23 18:40:28,831 | model_load | This analysis will use the following 84 models of molecular evolution
+INFO     | 2017-08-23 18:40:28,831 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, F81+X, HKY+X, TRN+X, K81UF+X, TVM+X, TIM+X, GTR+X, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, F81+G+X, HKY+G+X, TRN+G+X, K81UF+G+X, TVM+G+X, TIM+G+X, GTR+G+X, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, F81+I+X, HKY+I+X, TRN+I+X, K81UF+I+X, TVM+I+X, TIM+I+X, GTR+I+X, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G, F81+I+G+X, HKY+I+G+X, TRN+I+G+X, K81UF+I+G+X, TVM+I+G+X, TIM+I+G+X, GTR+I+G+X
+INFO     | 2017-08-23 18:40:28,832 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 18:40:28,834 | config     | Setting 'search' to 'greedy'
+INFO     | 2017-08-23 18:40:28,834 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 18:40:28,834 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 18:40:28,841 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 18:40:28,841 | analysis   | Beginning Analysis
+INFO     | 2017-08-23 18:40:28,853 | config     | Checking previously run configuration data...
+INFO     | 2017-08-23 18:40:28,854 | alignment  | Reading alignment file './MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 18:40:28,862 | alignment  | Reading alignment file './analysis/start_tree/source.phy'
+INFO     | 2017-08-23 18:40:28,869 | analysis   | Starting tree file found.
+INFO     | 2017-08-23 18:40:28,870 | analysis_m | Performing Greedy Analysis
+INFO     | 2017-08-23 18:40:28,870 | analysis_m |    *** Analysing starting scheme ***
+ERROR    | 2017-08-23 18:42:11,280 | main       | User interrupted the Program
+INFO     | 2017-08-23 18:42:56,936 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 18:42:56,940 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 18:42:56,940 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 18:42:56,941 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 18:42:56,952 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 18:42:56,952 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 18:42:56,952 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 18:42:56,954 | config     | Setting 'search' to 'user'
+ERROR    | 2017-08-23 18:42:56,955 | parser     | There was a problem loading your .cfg file, please check and try again
+ERROR    | 2017-08-23 18:42:56,955 | parser     | Expected stringEnd (at char 507), (line:23, col:1)
+INFO     | 2017-08-23 18:42:56,955 | parser     | The line causing the problem is this: 'together = (Gene1, Gene2, Gene3)'. Please check that line, and make sure it appears in the right place in the config file. If it looks OK, try double-checking the semi-colons on other lines
+ERROR    | 2017-08-23 18:42:56,955 | main       | Failed to run. See previous errors.
+INFO     | 2017-08-23 18:43:06,948 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 18:43:06,951 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 18:43:06,951 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 18:43:06,952 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 18:43:06,962 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 18:43:06,963 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 18:43:06,963 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 18:43:06,965 | config     | Setting 'search' to 'user'
+INFO     | 2017-08-23 18:43:06,966 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 18:43:06,966 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 18:43:06,971 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 18:43:06,971 | analysis   | Beginning Analysis
+INFO     | 2017-08-23 18:43:06,981 | config     | Checking previously run configuration data...
+ERROR    | 2017-08-23 18:43:06,981 | config     | There are subsets stored, but PartitionFinder has detected that these were run using a different .cfg setup
+ERROR    | 2017-08-23 18:43:06,982 | config     | The following settings in the new .cfg file are incompatible with the previous analysis: [data_blocks]
+INFO     | 2017-08-23 18:43:06,982 | config     | To run this analysis and overwrite previous output, re-run the analysis using '--force-restart' option
+INFO     | 2017-08-23 18:43:06,982 | config     | To run this analysis without deleting the previous analysis, please place your alignment and .cfg in a new folder and try again
+ERROR    | 2017-08-23 18:43:06,983 | main       | Failed to run. See previous errors.
+INFO     | 2017-08-23 18:43:16,017 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 18:43:16,021 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 18:43:16,021 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 18:43:16,022 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 18:43:16,032 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 18:43:16,032 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 18:43:16,032 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 18:43:16,034 | config     | Setting 'search' to 'user'
+INFO     | 2017-08-23 18:43:16,035 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 18:43:16,035 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 18:43:16,040 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 18:43:16,040 | analysis   | Beginning Analysis
+WARNING  | 2017-08-23 18:43:16,041 | analysis   | Deleting all previous workings in './analysis'
+INFO     | 2017-08-23 18:43:16,061 | alignment  | Reading alignment file './MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 18:43:16,071 | analysis   | Starting tree will be estimated from the data.
+INFO     | 2017-08-23 18:43:16,073 | raxml      | Estimating Maximum Likelihood tree with RAxML fast experimental tree search for ./analysis/start_tree/filtered_source.phy
+INFO     | 2017-08-23 18:43:16,074 | raxml      | Using a separate GTR+G model for each data block
+INFO     | 2017-08-23 18:43:23,221 | raxml      | Estimating GTR+G branch lengths on ML tree using all partitions
+INFO     | 2017-08-23 18:43:27,093 | raxml      | ML topology estimation finished
+INFO     | 2017-08-23 18:43:27,094 | analysis_m | Performing User analysis
+INFO     | 2017-08-23 18:49:03,653 | model_util | Information on best scheme is here: ./analysis/best_scheme.txt
+INFO     | 2017-08-23 18:49:03,654 | model_util | 
+INFO     | 2017-08-23 18:49:03,654 | model_util | 
+INFO     | 2017-08-23 18:49:03,655 | model_util | *Citations for this analysis*
+INFO     | 2017-08-23 18:49:03,655 | model_util | -----------------------------
+INFO     | 2017-08-23 18:49:03,655 | model_util | 
+INFO     | 2017-08-23 18:49:03,655 | model_util | If you use this analysis in your published work, please cite the following papers on which your analysis relied.
+INFO     | 2017-08-23 18:49:03,655 | model_util | 
+INFO     | 2017-08-23 18:49:03,655 | model_util | For the version of PartitionFinder you used, please cite:
+INFO     | 2017-08-23 18:49:03,655 | model_util | Lanfear, R., Frandsen, P. B., Wright, A. M., Senfeld, T., Calcott, B. (2016) PartitionFinder 2: new methods for selecting partitioned models of evolution formolecular and morphological phylogenetic analyses. Molecular biology and evolution. DOI: dx.doi.org/10.1093/molbev/msw260
+INFO     | 2017-08-23 18:49:03,655 | model_util | 
+INFO     | 2017-08-23 18:49:03,656 | model_util | For the user algorithm you used, please cite:
+INFO     | 2017-08-23 18:49:03,656 | model_util | 
+INFO     | 2017-08-23 18:49:03,656 | model_util | Your analysis also used PhyML, so please cite:
+INFO     | 2017-08-23 18:49:03,656 | model_util | Guindon, S., Dufayard, J. F., Lefort, V., Anisimova, M., Hordijk, W., & Gascuel, O. (2010). New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0. Systematic biology, 59(3), 307-321.
+INFO     | 2017-08-23 18:49:03,656 | model_util | 
+INFO     | 2017-08-23 18:49:03,658 | main       | Total processing time: 0:05:47 (h:m:s)
+INFO     | 2017-08-23 18:49:03,658 | main       | Processing complete.
+INFO     | 2017-08-23 18:51:01,590 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 18:51:01,594 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 18:51:01,594 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 18:51:01,594 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 18:51:01,604 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 18:51:01,605 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 18:51:01,605 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 18:51:01,607 | config     | Setting 'search' to 'user'
+ERROR    | 2017-08-23 18:51:01,607 | parser     | There was a problem loading your .cfg file, please check and try again
+ERROR    | 2017-08-23 18:51:01,607 | parser     | Expected stringEnd (at char 507), (line:23, col:1)
+INFO     | 2017-08-23 18:51:01,607 | parser     | The line causing the problem is this: 'together = (Gene1, Gene2), Gene3;'. Please check that line, and make sure it appears in the right place in the config file. If it looks OK, try double-checking the semi-colons on other lines
+ERROR    | 2017-08-23 18:51:01,608 | main       | Failed to run. See previous errors.
+INFO     | 2017-08-23 18:51:43,254 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 18:51:43,257 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 18:51:43,258 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 18:51:43,258 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 18:51:43,269 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 18:51:43,269 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 18:51:43,269 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 18:51:43,271 | config     | Setting 'search' to 'user'
+INFO     | 2017-08-23 18:51:43,272 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 18:51:43,272 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 18:51:43,276 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 18:51:43,276 | analysis   | Beginning Analysis
+WARNING  | 2017-08-23 18:51:43,276 | analysis   | Deleting all previous workings in './analysis'
+INFO     | 2017-08-23 18:51:43,292 | alignment  | Reading alignment file './MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 18:51:43,300 | analysis   | Starting tree will be estimated from the data.
+INFO     | 2017-08-23 18:51:43,301 | raxml      | Estimating Maximum Likelihood tree with RAxML fast experimental tree search for ./analysis/start_tree/filtered_source.phy
+INFO     | 2017-08-23 18:51:43,301 | raxml      | Using a separate GTR+G model for each data block
+INFO     | 2017-08-23 18:51:50,224 | raxml      | Estimating GTR+G branch lengths on ML tree using all partitions
+INFO     | 2017-08-23 18:52:06,589 | raxml      | ML topology estimation finished
+INFO     | 2017-08-23 18:52:06,590 | analysis_m | Performing User analysis
+INFO     | 2017-08-23 18:59:41,315 | model_util | Information on best scheme is here: ./analysis/best_scheme.txt
+INFO     | 2017-08-23 18:59:41,317 | model_util | 
+INFO     | 2017-08-23 18:59:41,317 | model_util | 
+INFO     | 2017-08-23 18:59:41,317 | model_util | *Citations for this analysis*
+INFO     | 2017-08-23 18:59:41,318 | model_util | -----------------------------
+INFO     | 2017-08-23 18:59:41,318 | model_util | 
+INFO     | 2017-08-23 18:59:41,318 | model_util | If you use this analysis in your published work, please cite the following papers on which your analysis relied.
+INFO     | 2017-08-23 18:59:41,318 | model_util | 
+INFO     | 2017-08-23 18:59:41,318 | model_util | For the version of PartitionFinder you used, please cite:
+INFO     | 2017-08-23 18:59:41,318 | model_util | Lanfear, R., Frandsen, P. B., Wright, A. M., Senfeld, T., Calcott, B. (2016) PartitionFinder 2: new methods for selecting partitioned models of evolution formolecular and morphological phylogenetic analyses. Molecular biology and evolution. DOI: dx.doi.org/10.1093/molbev/msw260
+INFO     | 2017-08-23 18:59:41,318 | model_util | 
+INFO     | 2017-08-23 18:59:41,318 | model_util | For the user algorithm you used, please cite:
+INFO     | 2017-08-23 18:59:41,319 | model_util | 
+INFO     | 2017-08-23 18:59:41,319 | model_util | Your analysis also used PhyML, so please cite:
+INFO     | 2017-08-23 18:59:41,319 | model_util | Guindon, S., Dufayard, J. F., Lefort, V., Anisimova, M., Hordijk, W., & Gascuel, O. (2010). New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0. Systematic biology, 59(3), 307-321.
+INFO     | 2017-08-23 18:59:41,319 | model_util | 
+INFO     | 2017-08-23 18:59:41,321 | main       | Total processing time: 0:07:58 (h:m:s)
+INFO     | 2017-08-23 18:59:41,321 | main       | Processing complete.
+INFO     | 2017-08-23 19:01:23,942 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 19:01:23,945 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:01:23,946 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 19:01:23,946 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 19:01:23,956 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 19:01:23,956 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 19:01:23,956 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 19:01:23,958 | config     | Setting 'search' to 'user'
+INFO     | 2017-08-23 19:01:23,959 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 19:01:23,959 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 19:01:23,964 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 19:01:23,964 | analysis   | Beginning Analysis
+WARNING  | 2017-08-23 19:01:23,964 | analysis   | Deleting all previous workings in './analysis'
+INFO     | 2017-08-23 19:01:23,979 | alignment  | Reading alignment file './MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:01:23,988 | analysis   | Starting tree will be estimated from the data.
+INFO     | 2017-08-23 19:01:23,989 | raxml      | Estimating Maximum Likelihood tree with RAxML fast experimental tree search for ./analysis/start_tree/filtered_source.phy
+INFO     | 2017-08-23 19:01:23,990 | raxml      | Using a separate GTR+G model for each data block
+INFO     | 2017-08-23 19:01:29,702 | raxml      | Estimating GTR+G branch lengths on ML tree using all partitions
+INFO     | 2017-08-23 19:01:33,181 | raxml      | ML topology estimation finished
+INFO     | 2017-08-23 19:01:33,182 | analysis_m | Performing User analysis
+INFO     | 2017-08-23 19:08:13,666 | model_util | Information on best scheme is here: ./analysis/best_scheme.txt
+INFO     | 2017-08-23 19:08:13,668 | model_util | 
+INFO     | 2017-08-23 19:08:13,668 | model_util | 
+INFO     | 2017-08-23 19:08:13,668 | model_util | *Citations for this analysis*
+INFO     | 2017-08-23 19:08:13,668 | model_util | -----------------------------
+INFO     | 2017-08-23 19:08:13,668 | model_util | 
+INFO     | 2017-08-23 19:08:13,668 | model_util | If you use this analysis in your published work, please cite the following papers on which your analysis relied.
+INFO     | 2017-08-23 19:08:13,669 | model_util | 
+INFO     | 2017-08-23 19:08:13,669 | model_util | For the version of PartitionFinder you used, please cite:
+INFO     | 2017-08-23 19:08:13,669 | model_util | Lanfear, R., Frandsen, P. B., Wright, A. M., Senfeld, T., Calcott, B. (2016) PartitionFinder 2: new methods for selecting partitioned models of evolution formolecular and morphological phylogenetic analyses. Molecular biology and evolution. DOI: dx.doi.org/10.1093/molbev/msw260
+INFO     | 2017-08-23 19:08:13,669 | model_util | 
+INFO     | 2017-08-23 19:08:13,669 | model_util | For the user algorithm you used, please cite:
+INFO     | 2017-08-23 19:08:13,669 | model_util | 
+INFO     | 2017-08-23 19:08:13,670 | model_util | Your analysis also used PhyML, so please cite:
+INFO     | 2017-08-23 19:08:13,670 | model_util | Guindon, S., Dufayard, J. F., Lefort, V., Anisimova, M., Hordijk, W., & Gascuel, O. (2010). New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0. Systematic biology, 59(3), 307-321.
+INFO     | 2017-08-23 19:08:13,670 | model_util | 
+INFO     | 2017-08-23 19:08:13,672 | main       | Total processing time: 0:06:50 (h:m:s)
+INFO     | 2017-08-23 19:08:13,672 | main       | Processing complete.
+INFO     | 2017-08-23 19:09:32,233 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 19:09:32,237 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:09:32,238 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 19:09:32,238 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 19:09:32,248 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 19:09:32,248 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 19:09:32,248 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 19:09:32,250 | config     | Setting 'search' to 'user'
+INFO     | 2017-08-23 19:09:32,250 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 19:09:32,251 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 19:09:32,255 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 19:09:32,256 | analysis   | Beginning Analysis
+WARNING  | 2017-08-23 19:09:32,256 | analysis   | Deleting all previous workings in './analysis'
+INFO     | 2017-08-23 19:09:32,277 | alignment  | Reading alignment file './MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:09:32,286 | analysis   | Starting tree will be estimated from the data.
+INFO     | 2017-08-23 19:09:32,286 | raxml      | Estimating Maximum Likelihood tree with RAxML fast experimental tree search for ./analysis/start_tree/filtered_source.phy
+INFO     | 2017-08-23 19:09:32,287 | raxml      | Using a separate GTR+G model for each data block
+INFO     | 2017-08-23 19:09:39,908 | raxml      | Estimating GTR+G branch lengths on ML tree using all partitions
+INFO     | 2017-08-23 19:09:44,149 | raxml      | ML topology estimation finished
+INFO     | 2017-08-23 19:09:44,150 | analysis_m | Performing User analysis
+INFO     | 2017-08-23 19:16:09,004 | model_util | Information on best scheme is here: ./analysis/best_scheme.txt
+INFO     | 2017-08-23 19:16:09,006 | model_util | 
+INFO     | 2017-08-23 19:16:09,006 | model_util | 
+INFO     | 2017-08-23 19:16:09,006 | model_util | *Citations for this analysis*
+INFO     | 2017-08-23 19:16:09,006 | model_util | -----------------------------
+INFO     | 2017-08-23 19:16:09,006 | model_util | 
+INFO     | 2017-08-23 19:16:09,006 | model_util | If you use this analysis in your published work, please cite the following papers on which your analysis relied.
+INFO     | 2017-08-23 19:16:09,007 | model_util | 
+INFO     | 2017-08-23 19:16:09,007 | model_util | For the version of PartitionFinder you used, please cite:
+INFO     | 2017-08-23 19:16:09,007 | model_util | Lanfear, R., Frandsen, P. B., Wright, A. M., Senfeld, T., Calcott, B. (2016) PartitionFinder 2: new methods for selecting partitioned models of evolution formolecular and morphological phylogenetic analyses. Molecular biology and evolution. DOI: dx.doi.org/10.1093/molbev/msw260
+INFO     | 2017-08-23 19:16:09,007 | model_util | 
+INFO     | 2017-08-23 19:16:09,007 | model_util | For the user algorithm you used, please cite:
+INFO     | 2017-08-23 19:16:09,007 | model_util | 
+INFO     | 2017-08-23 19:16:09,007 | model_util | Your analysis also used PhyML, so please cite:
+INFO     | 2017-08-23 19:16:09,008 | model_util | Guindon, S., Dufayard, J. F., Lefort, V., Anisimova, M., Hordijk, W., & Gascuel, O. (2010). New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0. Systematic biology, 59(3), 307-321.
+INFO     | 2017-08-23 19:16:09,008 | model_util | 
+INFO     | 2017-08-23 19:16:09,009 | main       | Total processing time: 0:06:37 (h:m:s)
+INFO     | 2017-08-23 19:16:09,009 | main       | Processing complete.
+INFO     | 2017-08-23 19:18:52,452 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 19:18:52,455 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:18:52,456 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 19:18:52,456 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 19:18:52,466 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 19:18:52,466 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 19:18:52,466 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 19:18:52,468 | config     | Setting 'search' to 'user'
+INFO     | 2017-08-23 19:18:52,469 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 19:18:52,469 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 19:18:52,474 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 19:18:52,474 | analysis   | Beginning Analysis
+WARNING  | 2017-08-23 19:18:52,474 | analysis   | Deleting all previous workings in './analysis'
+INFO     | 2017-08-23 19:18:52,492 | alignment  | Reading alignment file './MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:18:52,500 | analysis   | Starting tree will be estimated from the data.
+INFO     | 2017-08-23 19:18:52,501 | raxml      | Estimating Maximum Likelihood tree with RAxML fast experimental tree search for ./analysis/start_tree/filtered_source.phy
+INFO     | 2017-08-23 19:18:52,501 | raxml      | Using a separate GTR+G model for each data block
+INFO     | 2017-08-23 19:18:57,915 | raxml      | Estimating GTR+G branch lengths on ML tree using all partitions
+INFO     | 2017-08-23 19:19:01,345 | raxml      | ML topology estimation finished
+INFO     | 2017-08-23 19:19:01,345 | analysis_m | Performing User analysis
+INFO     | 2017-08-23 19:26:13,991 | model_util | Information on best scheme is here: ./analysis/best_scheme.txt
+INFO     | 2017-08-23 19:26:13,993 | model_util | 
+INFO     | 2017-08-23 19:26:13,993 | model_util | 
+INFO     | 2017-08-23 19:26:13,994 | model_util | *Citations for this analysis*
+INFO     | 2017-08-23 19:26:13,994 | model_util | -----------------------------
+INFO     | 2017-08-23 19:26:13,994 | model_util | 
+INFO     | 2017-08-23 19:26:13,994 | model_util | If you use this analysis in your published work, please cite the following papers on which your analysis relied.
+INFO     | 2017-08-23 19:26:13,994 | model_util | 
+INFO     | 2017-08-23 19:26:13,994 | model_util | For the version of PartitionFinder you used, please cite:
+INFO     | 2017-08-23 19:26:13,994 | model_util | Lanfear, R., Frandsen, P. B., Wright, A. M., Senfeld, T., Calcott, B. (2016) PartitionFinder 2: new methods for selecting partitioned models of evolution formolecular and morphological phylogenetic analyses. Molecular biology and evolution. DOI: dx.doi.org/10.1093/molbev/msw260
+INFO     | 2017-08-23 19:26:13,995 | model_util | 
+INFO     | 2017-08-23 19:26:13,995 | model_util | For the user algorithm you used, please cite:
+INFO     | 2017-08-23 19:26:13,995 | model_util | 
+INFO     | 2017-08-23 19:26:13,995 | model_util | Your analysis also used PhyML, so please cite:
+INFO     | 2017-08-23 19:26:13,995 | model_util | Guindon, S., Dufayard, J. F., Lefort, V., Anisimova, M., Hordijk, W., & Gascuel, O. (2010). New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0. Systematic biology, 59(3), 307-321.
+INFO     | 2017-08-23 19:26:13,995 | model_util | 
+INFO     | 2017-08-23 19:26:13,997 | main       | Total processing time: 0:07:21 (h:m:s)
+INFO     | 2017-08-23 19:26:13,997 | main       | Processing complete.
+INFO     | 2017-08-23 19:27:58,146 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 19:27:58,150 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:27:58,151 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 19:27:58,151 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 19:27:58,161 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 19:27:58,162 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 19:27:58,162 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 19:27:58,164 | config     | Setting 'search' to 'user'
+INFO     | 2017-08-23 19:27:58,165 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 19:27:58,165 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 19:27:58,170 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 19:27:58,170 | analysis   | Beginning Analysis
+WARNING  | 2017-08-23 19:27:58,170 | analysis   | Deleting all previous workings in './analysis'
+INFO     | 2017-08-23 19:27:58,187 | alignment  | Reading alignment file './MuellerAlignmnetJan12FINAL.nex'
+WARNING  | 2017-08-23 19:27:58,197 | subset_ops | These columns are missing from the block definitions: 2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17, 18, 20, 21, 23, 24, 26, 27, 29, 30, 32, 33, 35, 36, 38, 39, 41, 42, 44, 45, 47, 48, 50, 51, 53, 54, 56, 57, 59, 60, 62, 63, 65, 66, 68, 69, 71, 72, 74, 75, 77, 78, 80, 81, 83, 84, 86, 87, 89, 90, 92, 93, 95, 96, 98, 99, 101, 102, 104, 105, 107, 108, 110, 111, 113, 114, 116, 117, 119, 120, 122, 123, 125, 126, 128, 129, 131, 132, 134, 135, 137, 138, 140, 141, 143, 144, 146, 147, 149, 150, 152, 153, 155, 156, 158, 159, 161, 162, 164, 165, 167, 168, 170, 171, 173, 174, 176, 177, 179, 180, 182, 183, 185, 186, 188, 189, 191, 192, 194, 195, 197, 198, 200, 201, 203, 204, 206, 207, 209, 210, 212, 213, 215, 216, 219, 220, 222, 223, 225, 226, 228, 229, 231, 232, 234, 235, 237, 238, 240, 241, 243, 244, 246, 247, 249, 250, 252, 253, 255, 256, 258, 259, 261, 262, 264, 265, 267, 268, 270, 271, 273, 274, 276, 277, 279, 280, 282, 283, 285, 286, 288, 289, 291, 292, 294, 295, 297, 298, 300, 301, 303, 304, 306, 307, 309, 310, 312, 313, 315, 316, 318, 319, 321, 322, 324, 325, 327, 328, 330, 331, 333, 334, 336, 337, 339, 340, 342, 343, 345, 346, 348, 349, 351, 352, 354, 355, 357, 358, 360, 361, 363, 364, 366, 367, 369, 370, 372, 373, 375, 376, 378, 379, 381, 382, 384, 385, 387, 388, 390, 391, 393, 394, 396, 397, 399, 400, 402, 403, 405, 406, 408, 409, 411, 412, 414, 415, 417, 418, 420, 421, 423, 424, 426, 427, 429, 430, 432, 433, 435, 436, 438, 439, 441, 442, 444, 445, 447, 448, 450, 451, 453, 454, 456, 457, 459, 460, 462, 463, 465, 466, 468, 469, 471, 472, 474, 475, 477, 478, 480, 481, 483, 484, 486, 487, 489, 490, 492, 493, 495, 496, 498, 499, 501, 502, 504, 505, 507, 508, 510, 511, 513, 514, 516, 517, 519, 520, 522, 523, 525, 526, 528, 529, 531, 532, 534, 535, 537, 538, 540, 541, 543, 544, 546, 547, 549, 550, 552, 553, 555, 556, 558, 559, 561, 562, 564, 565, 567, 568, 570, 571, 573, 574, 576, 577, 579, 580, 582, 583, 585, 586, 588, 589, 591, 592, 594, 595, 597, 598, 600, 601, 603, 604, 606, 607, 609, 610, 612, 613, 615, 616, 618, 619, 621, 622, 624, 625, 627, 628, 630, 631, 633, 634, 636, 637, 639, 640, 642, 643, 645, 646, 648, 649, 651, 652, 654, 655, 657, 658, 660, 661, 663, 664, 666, 667, 669, 670, 672, 673, 675, 676, 678, 679, 681, 682, 684, 685, 687, 688, 690, 691, 693, 694, 696, 697, 699, 700, 702, 703, 705, 706, 708, 709, 711, 712, 714, 715, 717, 718, 720, 721, 723, 724, 726, 727, 729, 730, 732, 733, 735, 736, 738, 739, 741, 742, 744, 745, 747, 748, 750, 751, 753, 754, 756, 757, 759, 760, 762, 763, 765, 766, 768, 769, 771, 772, 774, 775, 777, 778, 780, 781, 783, 784, 786, 787, 789, 790, 792, 793, 795, 796, 798, 799, 801, 802, 804, 805, 807, 808, 810, 811, 813, 814, 816, 817, 819, 820, 822, 823, 825, 826, 828, 829, 831, 832, 834, 835, 837, 838, 840, 841, 843, 844, 846, 847, 849, 850, 852, 853, 855, 856, 858, 859, 861, 863, 864, 866, 867, 869, 870, 872, 873, 875, 876, 878, 879, 881, 882, 884, 885, 887, 888, 890, 891, 893, 894, 896, 897, 899, 900, 902, 903, 905, 906, 908, 909, 911, 912, 914, 915, 917, 918, 920, 921, 923, 924, 926, 927, 929, 930, 932, 933, 935, 936, 938, 939, 941, 942, 944, 945, 947, 948, 950, 951, 953, 954, 956, 957, 959, 960, 962, 963, 965, 966, 968, 969, 971, 972, 974, 975, 977, 978, 980, 981, 983, 984, 986, 987, 989, 990, 992, 993, 995, 996, 998, 999, 1001, 1002, 1004, 1005, 1007, 1008, 1010, 1011, 1013, 1014, 1016, 1017, 1019, 1020, 1022, 1023, 1025, 1026, 1028, 1029, 1031, 1032, 1034, 1035, 1037, 1038, 1040, 1041, 1043, 1044, 1046, 1047, 1049, 1050, 1052, 1053, 1055, 1056, 1058, 1059, 1061, 1062, 1064, 1065, 1067, 1068, 1070, 1071, 1073, 1074, 1076, 1077, 1079, 1080, 1082, 1083, 1085, 1086, 1088, 1089, 1091, 1092, 1094, 1095, 1097, 1098, 1100, 1101, 1103, 1104, 1106, 1107, 1109, 1110, 1112, 1113, 1115, 1116, 1118, 1119, 1121, 1122, 1124, 1125, 1127, 1128, 1130, 1131, 1133, 1134, 1136, 1137, 1139, 1140, 1142, 1143, 1145, 1146, 1148, 1149, 1151, 1152, 1154, 1155, 1157, 1158, 1160, 1161, 1163, 1164, 1166, 1167, 1169, 1170, 1172, 1173, 1175, 1176, 1178, 1179, 1181, 1182, 1184, 1185, 1187, 1188, 1190, 1191, 1193, 1194, 1196, 1197, 1199, 1200, 1202, 1203
+ERROR    | 2017-08-23 19:27:58,197 | subset_ops | You cannot estimate a Maximum Likelihood (ML) starting tree (the default behaviour) when you have columns missing from your data block definitions, because the method we use to estimate the ML tree requires all sites in the alignment to be assigned to a data block. We recommend that you either remove the sites you don't want from your alignment or (if possible) include the missing sites in appropriate data blocks. Failing that, you can use the --no-ml-tree command line option. In this case, a NJ (PhyML) or MP(RaxML) starting tree will be estimated for your analysis.
+ERROR    | 2017-08-23 19:27:58,199 | main       | Failed to run. See previous errors.
+INFO     | 2017-08-23 19:32:35,854 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 19:32:35,858 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:32:35,858 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 19:32:35,859 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 19:32:35,868 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 19:32:35,868 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 19:32:35,868 | config     | Setting 'model_selection' to 'aicc'
+ERROR    | 2017-08-23 19:32:35,872 | parser     | The following sites overlap in your block definitions
+ERROR    | 2017-08-23 19:32:35,872 | parser     | [1026, 1029, 1032, 1035, 1038, 1041, 1044, 1047, 1050, 1053, 1056, 1059, 1062, 1065, 1068, 1071, 1074, 1077, 1080, 1083, 1086, 1089, 1092, 1095, 1098, 1101, 1104, 1107, 1110, 1113, 1116, 1119, 1122, 1125, 1128, 1131, 1134, 1137, 1140, 1143, 1146, 1149, 1152, 1155, 1158, 1161, 1164, 1167, 1170, 1173, 1176, 1179, 1182, 1185, 1188, 1191, 1194, 1197, 1200, 1203, 861, 864, 867, 870, 873, 876, 879, 882, 885, 888, 891, 894, 897, 900, 903, 906, 909, 912, 915, 918, 921, 924, 927, 930, 933, 936, 939, 942, 945, 948, 951, 954, 957, 960, 963, 966, 969, 972, 975, 978, 981, 984, 987, 990, 993, 996, 999, 1002, 1005, 1008, 1011, 1014, 1017, 1020, 1023]
+ERROR    | 2017-08-23 19:32:35,872 | parser     | Please change your definitions so each site occurs in only one block, and try again.
+ERROR    | 2017-08-23 19:32:35,873 | parser     | Problem occurred at line:15, column:1
+ERROR    | 2017-08-23 19:32:35,873 | main       | Failed to run. See previous errors.
+INFO     | 2017-08-23 19:33:26,740 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 19:33:26,743 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:33:26,743 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 19:33:26,744 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 19:33:26,753 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 19:33:26,753 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 19:33:26,754 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 19:33:26,758 | config     | Setting 'search' to 'user'
+ERROR    | 2017-08-23 19:33:26,758 | parser     | There was a problem loading your .cfg file, please check and try again
+ERROR    | 2017-08-23 19:33:26,758 | parser     | Expected stringEnd (at char 656), (line:31, col:1)
+INFO     | 2017-08-23 19:33:26,758 | parser     | The line causing the problem is this: 'together = (Gene1_c1 Gene1_c2 Gene1_c3) (Gene2_c1 Gene2_c2 Gene2_c3) (Gene3_c1 Gene3_c2 Gene3_c3);'. Please check that line, and make sure it appears in the right place in the config file. If it looks OK, try double-checking the semi-colons on other lines
+ERROR    | 2017-08-23 19:33:26,758 | main       | Failed to run. See previous errors.
+INFO     | 2017-08-23 19:37:20,690 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 19:37:20,693 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:37:20,694 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 19:37:20,694 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 19:37:20,703 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 19:37:20,703 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 19:37:20,703 | config     | Setting 'model_selection' to 'aicc'
+ERROR    | 2017-08-23 19:37:20,705 | parser     | There was a problem loading your .cfg file, please check and try again
+ERROR    | 2017-08-23 19:37:20,705 | parser     | Expected "[schemes]" (at char 401), (line:17, col:1)
+INFO     | 2017-08-23 19:37:20,705 | parser     | It looks like the '[schemes]' option might be missing or in the wrong place. Or perhaps something is wrong in the lines just before the '[schemes]' option is missing. Please double check the configuration file and try again
+ERROR    | 2017-08-23 19:37:20,705 | main       | Failed to run. See previous errors.
+INFO     | 2017-08-23 19:37:35,427 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 19:37:35,430 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:37:35,431 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 19:37:35,431 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 19:37:35,442 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 19:37:35,442 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 19:37:35,443 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 19:37:35,447 | config     | Setting 'search' to 'user'
+ERROR    | 2017-08-23 19:37:35,447 | parser     | There was a problem loading your .cfg file, please check and try again
+ERROR    | 2017-08-23 19:37:35,447 | parser     | Expected stringEnd (at char 677), (line:31, col:1)
+INFO     | 2017-08-23 19:37:35,447 | parser     | The line causing the problem is this: 'together = (Gene1_codon1 Gene1_codon2 Gene1_codon3) (Gene2_codon1 Gene2_codon2 Gene2_codon3) (Gene3_c1 Gene3_c2 Gene3_c3);'. Please check that line, and make sure it appears in the right place in the config file. If it looks OK, try double-checking the semi-colons on other lines
+ERROR    | 2017-08-23 19:37:35,448 | main       | Failed to run. See previous errors.
+INFO     | 2017-08-23 19:38:54,337 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 19:38:54,340 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:38:54,340 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 19:38:54,341 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 19:38:54,350 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 19:38:54,350 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 19:38:54,351 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 19:38:54,354 | config     | Setting 'search' to 'user'
+INFO     | 2017-08-23 19:38:54,356 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 19:38:54,356 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 19:38:54,360 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 19:38:54,360 | analysis   | Beginning Analysis
+WARNING  | 2017-08-23 19:38:54,361 | analysis   | Deleting all previous workings in './analysis'
+INFO     | 2017-08-23 19:38:54,372 | alignment  | Reading alignment file './MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:38:54,384 | analysis   | Starting tree will be estimated from the data.
+INFO     | 2017-08-23 19:38:54,384 | raxml      | Estimating Maximum Likelihood tree with RAxML fast experimental tree search for ./analysis/start_tree/filtered_source.phy
+INFO     | 2017-08-23 19:38:54,385 | raxml      | Using a separate GTR+G model for each data block
+INFO     | 2017-08-23 19:39:04,403 | raxml      | Estimating GTR+G branch lengths on ML tree using all partitions
+INFO     | 2017-08-23 19:39:10,411 | raxml      | ML topology estimation finished
+INFO     | 2017-08-23 19:39:10,412 | analysis_m | Performing User analysis
+INFO     | 2017-08-23 19:46:48,051 | model_util | Information on best scheme is here: ./analysis/best_scheme.txt
+INFO     | 2017-08-23 19:46:48,054 | model_util | 
+INFO     | 2017-08-23 19:46:48,054 | model_util | 
+INFO     | 2017-08-23 19:46:48,054 | model_util | *Citations for this analysis*
+INFO     | 2017-08-23 19:46:48,054 | model_util | -----------------------------
+INFO     | 2017-08-23 19:46:48,054 | model_util | 
+INFO     | 2017-08-23 19:46:48,055 | model_util | If you use this analysis in your published work, please cite the following papers on which your analysis relied.
+INFO     | 2017-08-23 19:46:48,055 | model_util | 
+INFO     | 2017-08-23 19:46:48,055 | model_util | For the version of PartitionFinder you used, please cite:
+INFO     | 2017-08-23 19:46:48,055 | model_util | Lanfear, R., Frandsen, P. B., Wright, A. M., Senfeld, T., Calcott, B. (2016) PartitionFinder 2: new methods for selecting partitioned models of evolution formolecular and morphological phylogenetic analyses. Molecular biology and evolution. DOI: dx.doi.org/10.1093/molbev/msw260
+INFO     | 2017-08-23 19:46:48,055 | model_util | 
+INFO     | 2017-08-23 19:46:48,055 | model_util | For the user algorithm you used, please cite:
+INFO     | 2017-08-23 19:46:48,055 | model_util | 
+INFO     | 2017-08-23 19:46:48,056 | model_util | Your analysis also used PhyML, so please cite:
+INFO     | 2017-08-23 19:46:48,056 | model_util | Guindon, S., Dufayard, J. F., Lefort, V., Anisimova, M., Hordijk, W., & Gascuel, O. (2010). New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0. Systematic biology, 59(3), 307-321.
+INFO     | 2017-08-23 19:46:48,056 | model_util | 
+INFO     | 2017-08-23 19:46:48,057 | main       | Total processing time: 0:07:54 (h:m:s)
+INFO     | 2017-08-23 19:46:48,058 | main       | Processing complete.
+INFO     | 2017-08-23 19:49:48,690 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 19:49:48,694 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:49:48,694 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 19:49:48,694 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 19:49:48,705 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 19:49:48,705 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 19:49:48,706 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 19:49:48,709 | config     | Setting 'search' to 'user'
+INFO     | 2017-08-23 19:49:48,711 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 19:49:48,711 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 19:49:48,717 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 19:49:48,717 | analysis   | Beginning Analysis
+WARNING  | 2017-08-23 19:49:48,717 | analysis   | Deleting all previous workings in './analysis'
+INFO     | 2017-08-23 19:49:48,734 | alignment  | Reading alignment file './MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 19:49:48,742 | analysis   | Starting tree will be estimated from the data.
+INFO     | 2017-08-23 19:49:48,742 | raxml      | Estimating Maximum Likelihood tree with RAxML fast experimental tree search for ./analysis/start_tree/filtered_source.phy
+INFO     | 2017-08-23 19:49:48,743 | raxml      | Using a separate GTR+G model for each data block
+INFO     | 2017-08-23 19:50:00,393 | raxml      | Estimating GTR+G branch lengths on ML tree using all partitions
+INFO     | 2017-08-23 19:50:05,639 | raxml      | ML topology estimation finished
+INFO     | 2017-08-23 19:50:05,639 | analysis_m | Performing User analysis
+INFO     | 2017-08-23 19:59:41,759 | model_util | Information on best scheme is here: ./analysis/best_scheme.txt
+INFO     | 2017-08-23 19:59:41,766 | model_util | 
+INFO     | 2017-08-23 19:59:41,766 | model_util | 
+INFO     | 2017-08-23 19:59:41,766 | model_util | *Citations for this analysis*
+INFO     | 2017-08-23 19:59:41,766 | model_util | -----------------------------
+INFO     | 2017-08-23 19:59:41,766 | model_util | 
+INFO     | 2017-08-23 19:59:41,766 | model_util | If you use this analysis in your published work, please cite the following papers on which your analysis relied.
+INFO     | 2017-08-23 19:59:41,766 | model_util | 
+INFO     | 2017-08-23 19:59:41,766 | model_util | For the version of PartitionFinder you used, please cite:
+INFO     | 2017-08-23 19:59:41,766 | model_util | Lanfear, R., Frandsen, P. B., Wright, A. M., Senfeld, T., Calcott, B. (2016) PartitionFinder 2: new methods for selecting partitioned models of evolution formolecular and morphological phylogenetic analyses. Molecular biology and evolution. DOI: dx.doi.org/10.1093/molbev/msw260
+INFO     | 2017-08-23 19:59:41,766 | model_util | 
+INFO     | 2017-08-23 19:59:41,766 | model_util | For the user algorithm you used, please cite:
+INFO     | 2017-08-23 19:59:41,766 | model_util | 
+INFO     | 2017-08-23 19:59:41,767 | model_util | Your analysis also used PhyML, so please cite:
+INFO     | 2017-08-23 19:59:41,799 | model_util | Guindon, S., Dufayard, J. F., Lefort, V., Anisimova, M., Hordijk, W., & Gascuel, O. (2010). New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0. Systematic biology, 59(3), 307-321.
+INFO     | 2017-08-23 19:59:41,799 | model_util | 
+INFO     | 2017-08-23 19:59:41,802 | main       | Total processing time: 0:09:53 (h:m:s)
+INFO     | 2017-08-23 19:59:41,802 | main       | Processing complete.
+INFO     | 2017-08-23 20:02:32,543 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 20:02:32,546 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 20:02:32,547 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 20:02:32,547 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 20:02:32,556 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 20:02:32,557 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 20:02:32,557 | config     | Setting 'model_selection' to 'aicc'
+ERROR    | 2017-08-23 20:02:32,558 | parser     | There was a problem loading your .cfg file, please check and try again
+ERROR    | 2017-08-23 20:02:32,558 | parser     | Expected ";" (at char 373), (line:15, col:21)
+INFO     | 2017-08-23 20:02:32,558 | parser     | The line causing the problem is this: 'Gene1_codon1 = 1-217\;'. Please check that line, and make sure it appears in the right place in the config file. If it looks OK, try double-checking the semi-colons on other lines
+ERROR    | 2017-08-23 20:02:32,558 | main       | Failed to run. See previous errors.
+INFO     | 2017-08-23 20:02:43,156 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 20:02:43,159 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 20:02:43,160 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 20:02:43,160 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 20:02:43,170 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 20:02:43,170 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 20:02:43,171 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 20:02:43,173 | config     | Setting 'search' to 'user'
+INFO     | 2017-08-23 20:02:43,174 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 20:02:43,174 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 20:02:43,179 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 20:02:43,179 | analysis   | Beginning Analysis
+WARNING  | 2017-08-23 20:02:43,179 | analysis   | Deleting all previous workings in './analysis'
+INFO     | 2017-08-23 20:02:43,195 | alignment  | Reading alignment file './MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 20:02:43,204 | analysis   | Starting tree will be estimated from the data.
+INFO     | 2017-08-23 20:02:43,205 | raxml      | Estimating Maximum Likelihood tree with RAxML fast experimental tree search for ./analysis/start_tree/filtered_source.phy
+INFO     | 2017-08-23 20:02:43,205 | raxml      | Using a separate GTR+G model for each data block
+INFO     | 2017-08-23 20:02:52,723 | raxml      | Estimating GTR+G branch lengths on ML tree using all partitions
+INFO     | 2017-08-23 20:02:56,865 | raxml      | ML topology estimation finished
+INFO     | 2017-08-23 20:02:56,866 | analysis_m | Performing User analysis
+INFO     | 2017-08-23 20:10:39,103 | model_util | Information on best scheme is here: ./analysis/best_scheme.txt
+INFO     | 2017-08-23 20:10:39,107 | model_util | 
+INFO     | 2017-08-23 20:10:39,107 | model_util | 
+INFO     | 2017-08-23 20:10:39,107 | model_util | *Citations for this analysis*
+INFO     | 2017-08-23 20:10:39,107 | model_util | -----------------------------
+INFO     | 2017-08-23 20:10:39,107 | model_util | 
+INFO     | 2017-08-23 20:10:39,107 | model_util | If you use this analysis in your published work, please cite the following papers on which your analysis relied.
+INFO     | 2017-08-23 20:10:39,108 | model_util | 
+INFO     | 2017-08-23 20:10:39,108 | model_util | For the version of PartitionFinder you used, please cite:
+INFO     | 2017-08-23 20:10:39,108 | model_util | Lanfear, R., Frandsen, P. B., Wright, A. M., Senfeld, T., Calcott, B. (2016) PartitionFinder 2: new methods for selecting partitioned models of evolution formolecular and morphological phylogenetic analyses. Molecular biology and evolution. DOI: dx.doi.org/10.1093/molbev/msw260
+INFO     | 2017-08-23 20:10:39,108 | model_util | 
+INFO     | 2017-08-23 20:10:39,108 | model_util | For the user algorithm you used, please cite:
+INFO     | 2017-08-23 20:10:39,108 | model_util | 
+INFO     | 2017-08-23 20:10:39,108 | model_util | Your analysis also used PhyML, so please cite:
+INFO     | 2017-08-23 20:10:39,109 | model_util | Guindon, S., Dufayard, J. F., Lefort, V., Anisimova, M., Hordijk, W., & Gascuel, O. (2010). New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0. Systematic biology, 59(3), 307-321.
+INFO     | 2017-08-23 20:10:39,109 | model_util | 
+INFO     | 2017-08-23 20:10:39,110 | main       | Total processing time: 0:07:56 (h:m:s)
+INFO     | 2017-08-23 20:10:39,110 | main       | Processing complete.
+INFO     | 2017-08-23 20:25:50,724 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2017-08-23 20:25:50,728 | config     | Setting 'alignment' to 'MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 20:25:50,728 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2017-08-23 20:25:50,728 | parser     | You set 'models' to: all
+INFO     | 2017-08-23 20:25:50,737 | model_load | This analysis will use the following 56 models of molecular evolution
+INFO     | 2017-08-23 20:25:50,737 | model_load | JC, K80, TRNEF, K81, TVMEF, TIMEF, SYM, F81, HKY, TRN, K81UF, TVM, TIM, GTR, JC+G, K80+G, TRNEF+G, K81+G, TVMEF+G, TIMEF+G, SYM+G, F81+G, HKY+G, TRN+G, K81UF+G, TVM+G, TIM+G, GTR+G, JC+I, K80+I, TRNEF+I, K81+I, TVMEF+I, TIMEF+I, SYM+I, F81+I, HKY+I, TRN+I, K81UF+I, TVM+I, TIM+I, GTR+I, JC+I+G, K80+I+G, TRNEF+I+G, K81+I+G, TVMEF+I+G, TIMEF+I+G, SYM+I+G, F81+I+G, HKY+I+G, TRN+I+G, K81UF+I+G, TVM+I+G, TIM+I+G, GTR+I+G
+INFO     | 2017-08-23 20:25:50,738 | config     | Setting 'model_selection' to 'aicc'
+INFO     | 2017-08-23 20:25:50,739 | config     | Setting 'search' to 'all'
+INFO     | 2017-08-23 20:25:50,740 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2017-08-23 20:25:50,740 | config     | Looking for alignment file './MuellerAlignmnetJan12FINAL.nex'...
+INFO     | 2017-08-23 20:25:50,745 | threadpool | Using 4 cpus
+INFO     | 2017-08-23 20:25:50,745 | analysis   | Beginning Analysis
+WARNING  | 2017-08-23 20:25:50,745 | analysis   | Deleting all previous workings in './analysis'
+INFO     | 2017-08-23 20:25:50,760 | alignment  | Reading alignment file './MuellerAlignmnetJan12FINAL.nex'
+INFO     | 2017-08-23 20:25:50,769 | analysis   | Starting tree will be estimated from the data.
+INFO     | 2017-08-23 20:25:50,770 | raxml      | Estimating Maximum Likelihood tree with RAxML fast experimental tree search for ./analysis/start_tree/filtered_source.phy
+INFO     | 2017-08-23 20:25:50,770 | raxml      | Using a separate GTR+G model for each data block
+INFO     | 2017-08-23 20:25:56,352 | raxml      | Estimating GTR+G branch lengths on ML tree using all partitions
+INFO     | 2017-08-23 20:25:59,861 | raxml      | ML topology estimation finished
+INFO     | 2017-08-23 20:25:59,862 | analysis_m | Performing complete analysis
+INFO     | 2017-08-23 20:30:35,036 | progress   | Finished subset 1/7, 14.29 percent done
+INFO     | 2017-08-23 20:35:12,991 | progress   | Finished subset 2/7, 28.57 percent done
+INFO     | 2017-08-23 20:37:54,024 | progress   | Finished subset 3/7, 42.86 percent done
+INFO     | 2017-08-23 20:41:25,168 | progress   | Finished subset 4/7, 57.14 percent done
+INFO     | 2017-08-23 20:45:15,567 | progress   | Finished subset 5/7, 71.43 percent done
+INFO     | 2017-08-23 20:51:09,204 | progress   | Finished subset 6/7, 85.71 percent done
+INFO     | 2017-08-23 20:53:03,250 | progress   | Finished subset 7/7, 100.00 percent done
+INFO     | 2017-08-23 20:53:03,255 | model_util | Information on best scheme is here: ./analysis/best_scheme.txt
+INFO     | 2017-08-23 20:53:03,258 | model_util | 
+INFO     | 2017-08-23 20:53:03,258 | model_util | 
+INFO     | 2017-08-23 20:53:03,258 | model_util | *Citations for this analysis*
+INFO     | 2017-08-23 20:53:03,258 | model_util | -----------------------------
+INFO     | 2017-08-23 20:53:03,258 | model_util | 
+INFO     | 2017-08-23 20:53:03,258 | model_util | If you use this analysis in your published work, please cite the following papers on which your analysis relied.
+INFO     | 2017-08-23 20:53:03,258 | model_util | 
+INFO     | 2017-08-23 20:53:03,258 | model_util | For the version of PartitionFinder you used, please cite:
+INFO     | 2017-08-23 20:53:03,258 | model_util | Lanfear, R., Frandsen, P. B., Wright, A. M., Senfeld, T., Calcott, B. (2016) PartitionFinder 2: new methods for selecting partitioned models of evolution formolecular and morphological phylogenetic analyses. Molecular biology and evolution. DOI: dx.doi.org/10.1093/molbev/msw260
+INFO     | 2017-08-23 20:53:03,282 | model_util | 
+INFO     | 2017-08-23 20:53:03,283 | model_util | For the all algorithm you used, please cite:
+INFO     | 2017-08-23 20:53:03,283 | model_util | 
+INFO     | 2017-08-23 20:53:03,284 | model_util | Your analysis also used PhyML, so please cite:
+INFO     | 2017-08-23 20:53:03,284 | model_util | Guindon, S., Dufayard, J. F., Lefort, V., Anisimova, M., Hordijk, W., & Gascuel, O. (2010). New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0. Systematic biology, 59(3), 307-321.
+INFO     | 2017-08-23 20:53:03,285 | model_util | 
+INFO     | 2017-08-23 20:53:03,289 | main       | Total processing time: 0:27:13 (h:m:s)
+INFO     | 2017-08-23 20:53:03,289 | main       | Processing complete.

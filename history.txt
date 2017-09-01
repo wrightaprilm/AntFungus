@@ -1,0 +1,100 @@
+n_data_subsets <- v(data1, data2, data3)
+n_data_subsets
+n_species <- data.ntaxa()
+n_branches <- 2 * n_species - 3
+taxa <- data.taxa()
+mvi = 0
+mni = 0
+for (i in 1:n_data_subsets) {
+    # exchangeability rates for partition i
+    er_prior[i] <- v(1,1,1,1,1,1)
+    er[i] ~ dnDirichlet(er_prior[i])
+    moves[++mvi] = mvSimplexElementScale(er[i], alpha=10, tune=true, weight=3) 
+    # stationary frequencies for partition i
+    pi_prior[i] <- v(1,1,1,1)
+    pi[i] ~ dnDirichlet(pi_prior[i])
+    moves[++mvi] = mvSimplexElementScale(pi[i], alpha=10, tune=true, weight=2) 
+    # rate matrix for partition i
+    Q[i] := fnGTR(er[i],pi[i]) 
+  
+    # +Gamma for partition i
+    alpha_prior_mean[i] <- ln(2.0)
+    alpha_prior_sd[i] <- 0.587405
+    alpha[i] ~ dnLognormal( alpha_prior_mean[i], alpha_prior_sd[i] )
+    gamma_rates[i] := fnDiscretizeGamma( alpha[i], alpha[i], 4, false )
+    # add moves for the alpha parameter
+    moves[++mvi] = mvScale(alpha[i],weight=2)
+    # the probability of a site being invariable
+    pinvar[i] ~ dnBeta(1,1)
+    moves[++mvi] = mvScale(pinvar[i], lambda=0.1, tune=true, weight=2.0)
+    moves[++mvi] = mvSlide(pinvar[i], delta=0.1, tune=true, weight=2.0)
+}
+q()
+data = readDiscreteCharacterData("data/MuellerAlignmnetJan12FINAL.nex")
+data.excludeCharacter(218:1204)
+data1 <- data
+data.includeCharacter(218:1204)
+data.excludeCharacter(1:218)
+data.excludeCharacter(862:1204)
+data2 <- data
+data.includeCharacter(862:1204)
+data.includeCharacter(1:218)
+data.excludeCharacter(1:861)
+data3 <- data
+n_data_subsets <- v(data1, data2, data3)
+# Get some useful variables from the data. We need these later on.
+n_species <- data.ntaxa()
+n_branches <- 2 * n_species - 3
+taxa <- data.taxa()
+mvi = 0
+mni = 0
+for (i in 1:n_data_subsets) {
+er_prior[i] <- v(1,1,1,1,1,1)
+    er[i] ~ dnDirichlet(er_prior[i])
+    moves[++mvi] = mvSimplexElementScale(er[i], alpha=10, tune=true, weight=3) 
+    # stationary frequencies for partition i
+    pi_prior[i] <- v(1,1,1,1)
+    pi[i] ~ dnDirichlet(pi_prior[i])
+    moves[++mvi] = mvSimplexElementScale(pi[i], alpha=10, tune=true, weight=2) 
+    # rate matrix for partition i
+    Q[i] := fnGTR(er[i],pi[i]) 
+  
+    # +Gamma for partition i
+    alpha_prior_mean[i] <- ln(2.0)
+    alpha_prior_sd[i] <- 0.587405
+    alpha[i] ~ dnLognormal( alpha_prior_mean[i], alpha_prior_sd[i] )
+    gamma_rates[i] := fnDiscretizeGamma( alpha[i], alpha[i], 4, false )
+    # add moves for the alpha parameter
+    moves[++mvi] = mvScale(alpha[i],weight=2)
+    # the probability of a site being invariable
+    pinvar[i] ~ dnBeta(1,1)
+    moves[++mvi] = mvScale(pinvar[i], lambda=0.1, tune=true, weight=2.0)
+    moves[++mvi] = mvSlide(pinvar[i], delta=0.1, tune=true, weight=2.0)
+}
+data = readDiscreteCharacterData("data/MuellerAlignmnetJan12FINAL.nex")
+data.excludeCharacter(218:1204)
+data1 <- data
+data.includeCharacter(218:1204)
+data.excludeCharacter(1:218)
+data.excludeCharacter(862:1204)
+data2 <- data
+data.includeCharacter(862:1204)
+data.includeCharacter(1:218)
+data.excludeCharacter(1:861)
+data3 <- data
+n_data_subsets <- v(data1, data2, data3)
+# Get some useful variables from the data. We need these later on.
+n_species <- data.ntaxa()
+n_branches <- 2 * n_species - 3
+taxa <- data.taxa()
+mvi = 0
+mni = 0
+n_data_subsets
+for (i in 1:n_data_subsets) {
+}
+q()
+treetrace = readTreeTrace("output/bycodon_gene.trees", treetype="non-clock")
+treetrace = readTreeTrace("output/PS_gene.trees", treetype="non-clock")
+#treetrace.summarize()
+map_tree = mapTree(treetrace,"output/bycodon_gene_map.tre")
+q()
