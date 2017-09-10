@@ -1,0 +1,1 @@
+raxmlHPC -f a -p $RANDOM -x $RANDOM -# 100 -m GTRGAMMA -q raxml_partfile.txt -s MuellerAlignmnetJan12FINAL.phy -n by_gene_by_codon
